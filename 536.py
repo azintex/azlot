@@ -1,4 +1,4 @@
-fh = open('res.txt', 'w')
+fh = open('result.txt', 'w')
 
 inpt = int()
 
