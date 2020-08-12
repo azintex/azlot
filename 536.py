@@ -1,14 +1,14 @@
-import timeit
-
-def getSum():
-    inputedSum = int(input('Note* : value must be more than 14 and less than 171\
-                            \n Please type value : '))
-    if inputedSum < 15 or inputedSum > 170:
-        print('Not acceptible sum value, type again')
-        getSum()
-    return inputedSum
-
-def calcSum(value):
+while True:
+    print('Type sum:')
+    inputSum = input()
+    try:
+        inputSum = int(inputSum)
+    except:
+        print('Type numeric values')
+        continue
+    if(inputSum < 15 or inputSum > 171):
+        print('Sum must be in range 15 to 170 included')
+        continue
     with open('result.txt', 'w') as resultFile:
         for n in range(5,37):
             for m in range(4,36):
@@ -17,7 +17,7 @@ def calcSum(value):
                         for j in range(1,33):
                             if j < k and k < l and l < m and m < n:
                                 t = (j,k,l,m,n)
-                                if sum(t) == value:
+                                if sum(t) == inputSum:
                                     resultFile.write("%s\r" % str(t))
     resultFile.close()
-calcSum(getSum())
+    break
