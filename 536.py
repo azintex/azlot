@@ -7,9 +7,9 @@ while True:
         print('Type numeric values')
         continue
     if(inputSum < 15 or inputSum > 171):
-        print('Sum must be in range 15 to 170 included')
+        print('Sum must be in range from 15 to 170 included')
         continue
-    with open('536-result.txt', 'w') as resultFile:
+    with open('536-variations.txt', 'w') as resultFile:
         for n in range(5,37):
             for m in range(4,36):
                 for l in range(3,35):
