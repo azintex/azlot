@@ -1,12 +1,12 @@
 while True:
     print('Type sum:')
-    inputSum = input()
+    inputedSum = input()
     try:
-        inputSum = int(inputSum)
+        inputedSum = int(inputSum)
     except:
         print('Type numeric values')
         continue
-    if(inputSum < 15 or inputSum > 171):
+    if(inputedSum < 15 or inputedSum > 171):
         print('Sum must be in range from 15 to 170 included')
         continue
     with open('536-variations.txt', 'w') as resultFile:
@@ -17,7 +17,7 @@ while True:
                         for j in range(1,33):
                             if j < k and k < l and l < m and m < n:
                                 t = (j,k,l,m,n)
-                                if sum(t) == inputSum:
+                                if sum(t) == inputedSum:
                                     resultFile.write("%s\r" % str(t))
     resultFile.close()
     break
