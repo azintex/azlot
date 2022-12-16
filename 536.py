@@ -2,7 +2,7 @@ while True:
     print('Type sum:')
     inputedSum = input()
     try:
-        inputedSum = int(inputSum)
+        inputedSum = int(inputedSum)
     except:
         print('Type numeric values')
         continue
